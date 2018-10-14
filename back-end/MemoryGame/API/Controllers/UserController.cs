@@ -17,22 +17,24 @@ namespace API.Controllers
 
         [HttpPost]
         [Route("signIn")]
-        public HttpResponseMessage SignIn()
+        public HttpResponseMessage SignIn(User newUser)
         {
             try
             {
                 lock (DB.Users)
                 {
-                    string userName = HttpContext.Current.Request.Form["userName"];
-                    int age = int.Parse(HttpContext.Current.Request.Form["age"]);
-                    User newUser = new User() { UserName = userName, Age = age };
+
                     if (ModelState.IsValid)
                     {
                         DB.Users.Add(newUser);
                         return Request.CreateResponse(HttpStatusCode.Created, true);
                     }
                 }
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, "isNotUnique");
+                List<string> errors = new List<string>();
+                ModelState.Values.ToList()
+                    .ForEach(value => value.Errors.ToList()
+                    .ForEach(err => errors.Add(err.ErrorMessage)));
+                return Request.CreateResponse(HttpStatusCode.BadRequest, errors);
             }
             catch (Exception ex)
             {

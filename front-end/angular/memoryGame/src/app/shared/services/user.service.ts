@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Global } from '../../imports';
+import { User } from '../models/user.model';
 
 @Injectable()
 export class UserService {
@@ -17,11 +18,9 @@ export class UserService {
 
     //POST
     signIn(userName: string, age: number): Observable<any> {
-        let formData = new FormData();
-        formData.append("userName", userName);
-        formData.append("age", age.toString());
+        let user:User=new User(userName,age);
         let url: string = `${this.basicURL}/signIn`;
-        return this.http.post(url, formData);
+        return this.http.post(url, user);
     }
 
     //GET
