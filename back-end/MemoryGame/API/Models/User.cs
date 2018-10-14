@@ -1,4 +1,4 @@
-﻿using API.Help;
+﻿using API.Models.Validations;
 using System.ComponentModel.DataAnnotations;
 
 namespace API.Models
@@ -6,7 +6,7 @@ namespace API.Models
     public class User
     {
         [Required]
-        [Unique(ErrorMessage ="user name nust be unique")]
+        [UniqueUser]
         [MinLength(2, ErrorMessage = "user name must be at least 2 characters")]
         [MaxLength(10, ErrorMessage = "user name can be maximum 10 characters")]
         public string UserName { get; set; }

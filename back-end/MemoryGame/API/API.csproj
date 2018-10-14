@@ -112,6 +112,7 @@
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Validations\UniqueUserAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

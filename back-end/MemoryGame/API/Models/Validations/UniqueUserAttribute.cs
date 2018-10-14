@@ -1,13 +1,17 @@
-﻿using API.Models;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Web;
 
-namespace API.Help
+namespace API.Models.Validations
 {
-    [AttributeUsage(AttributeTargets.Property)]
-    public class Unique : ValidationAttribute
+    public class UniqueUserAttribute : ValidationAttribute
     {
+        public UniqueUserAttribute()
+        {
+            ErrorMessage = "user name nust be unique";
+        }
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             ValidationResult validationResult = ValidationResult.Success;
