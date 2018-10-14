@@ -62,3 +62,21 @@ D:\memory game\client-winForm\memoryGame\memoryGame\bin\Debug\System.Net.Http.Fo
 F:\memory game\client-winForm\memoryGame\memoryGame\bin\Debug\memoryGame.exe.config
 F:\memory game\client-winForm\memoryGame\memoryGame\obj\Debug\memoryGame.exe
 F:\memory game\client-winForm\memoryGame\memoryGame\obj\Debug\memoryGame.pdb
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\bin\Debug\memoryGame.exe.config
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\bin\Debug\memoryGame.exe
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\bin\Debug\memoryGame.pdb
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\bin\Debug\Newtonsoft.Json.dll
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\bin\Debug\Newtonsoft.Json.xml
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.csprojAssemblyReference.cache
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.ChoosePartner.resources
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.Game.resources
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.SignIn.resources
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.Properties.Resources.resources
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.StartGame.resources
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.csproj.GenerateResource.cache
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.csproj.CoreCompileInputs.cache
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.csproj.CopyComplete
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.exe
+C:\Users\seldat\Documents\GitHub\memory-game\front-end\windows-form\memoryGame\memoryGame\obj\Debug\memoryGame.pdb

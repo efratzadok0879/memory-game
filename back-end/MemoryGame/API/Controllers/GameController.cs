@@ -51,14 +51,14 @@ namespace API.Controllers
                     {
                         FindWinner(currentGame);
                         Task task = new Task(() =>
-                          {
-                              Thread.Sleep(2000);
-                              User currentUser = DB.Users.FirstOrDefault(user => user.UserName.Equals(userName));
-                              string partnerName =currentUser.PartnerUserName;
-                              currentUser.PartnerUserName = null;
-                              DB.Users.FirstOrDefault(user => user.UserName.Equals(partnerName)).PartnerUserName = null;
-                              DB.Games.Remove(currentGame);
-                          });
+                        {
+                            Thread.Sleep(2000);
+                            User currentUser = DB.Users.FirstOrDefault(user => user.UserName.Equals(userName));
+                            string partnerName = currentUser.PartnerUserName;
+                            currentUser.PartnerUserName = null;
+                            DB.Users.FirstOrDefault(user => user.UserName.Equals(partnerName)).PartnerUserName = null;
+                            DB.Games.Remove(currentGame);
+                        });
                         task.Start();
                         return Request.CreateResponse(HttpStatusCode.Created, true);
                     }
@@ -75,14 +75,14 @@ namespace API.Controllers
             {
                 return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex.Message);
             }
-
-
         }
+
         private bool IsGameOver(Game game)
         {
             bool isOver = game.CardArray.All(card => card.Value != null);
             return isOver;
         }
+
         private void FindWinner(Game game)
         {
             int count1 = game.CardArray.Count(card => card.Value.Equals(game.Player1.UserName));
@@ -93,6 +93,5 @@ namespace API.Controllers
                 DB.Users.FirstOrDefault(user => user.UserName.Equals(game.Player2.UserName)).Score++;
 
         }
-
     }
 }

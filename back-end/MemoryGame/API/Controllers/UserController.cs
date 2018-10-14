@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
@@ -95,8 +94,8 @@ namespace API.Controllers
                     User partnerUser = DB.Users.FirstOrDefault(user => user.UserName.Equals(partnerUserName));
                     if (currentUser != null &&
                         partnerUser != null &&
-                        currentUser.PartnerUserName==null &&
-                        partnerUser.PartnerUserName==null)
+                        currentUser.PartnerUserName == null &&
+                        partnerUser.PartnerUserName == null)
                     {
                         currentUser.PartnerUserName = partnerUser.UserName;
                         partnerUser.PartnerUserName = currentUser.UserName;

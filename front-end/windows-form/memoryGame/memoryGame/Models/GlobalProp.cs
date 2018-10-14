@@ -9,6 +9,6 @@ namespace memoryGame.Models
     class GlobalProp
     {
        public static User CurrentUser { get; set; }
-        public static string Host { get; set; } = "http://localhost:17667/api";
+        public static string Host { get; set; } = "http://localhost:50910/api";
     }
 }
