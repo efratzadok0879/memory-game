@@ -25,16 +25,11 @@ namespace API.Controllers
                 {
                     string userName = HttpContext.Current.Request.Form["userName"];
                     int age = int.Parse(HttpContext.Current.Request.Form["age"]);
-                    bool isUnique = DB.Users.FirstOrDefault(user => user.UserName.Equals(userName)) == null;
-                    if (isUnique)
+                    User newUser = new User() { UserName = userName, Age = age };
+                    if (ModelState.IsValid)
                     {
-                        User newUser = new User() { UserName = userName, Age = age };
-                        if (ModelState.IsValid)
-                        {
-
-                            DB.Users.Add(newUser);
-                            return Request.CreateResponse(HttpStatusCode.Created, true);
-                        }
+                        DB.Users.Add(newUser);
+                        return Request.CreateResponse(HttpStatusCode.Created, true);
                     }
                 }
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "isNotUnique");
